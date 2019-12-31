@@ -24,13 +24,20 @@ Främja idén att införa andrahandsröst eller rangordnad röst i Sveriges allm
 * Fritextsök efter parti eller kandidat.
 * Lägg till första-, andra- och tredjehandsval på en valsedel.
 * Ladda ner genererade tryckfiler.
+* Direktlänk till färdig valsedel eller grupp av valsedlar.
 * Beställ hem valsedlar (i framtiden när valsedlarna är giltiga).
 
 ## Information
 
 * Sammanfattning av fördelar.
+* Beskrivning av räkningsprocessen. Vad förändras?
 * Bra YouTube-videos som förklarar, kanske CGP Gray?
 * Länkar till välskrivna artiklar.
+* Vilka lagar finns och eventuellt behöver ändras? Nuvarande [regler för valsedelslayout](https://www.val.se/download/18.574dd8aa1610997fea4260d/1522337689763/2018-03-29-Manual-valsedelsbestallning-752-10.pdf).
+
+## Data
+
+* Skapa öppet dataregister med partier, kandidater, valkretsar, etc.
 
 ## Bidra
 
