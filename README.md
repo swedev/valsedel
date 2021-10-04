@@ -42,3 +42,12 @@ Främja idén att införa andrahandsröst eller rangordnad röst i Sveriges allm
 ## Bidra
 
 Om du är intresserad av att hjälpa till med utveckling och/eller innehåll, slå iväg ett mail till hello@swedev.org.
+
+
+## Länkar
+
+https://politologerna.wordpress.com/2019/12/15/lucka-15-sa-reformerar-vi-det-svenska-valsystemet/
+
+https://politologerna.wordpress.com/2018/04/01/konsten-att-klara-fyraprocentsparren/
+
+https://www.val.se/download/18.574dd8aa1610997fea4260d/1522337689763/2018-03-29-Manual-valsedelsbestallning-752-10.pdf
