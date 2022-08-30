@@ -1,0 +1,219 @@
+[
+  {
+    "forkortning": "AfS",
+    "partibeteckning": "Alternativ för Sverige",
+    "uuid": "8c35f740-48be-4f1e-909a-f83219cbc2c7",
+    "valmyndigheten_id": "1325",
+    "valmyndigheten_registreringsdatum": "2018-02-23"
+  },
+  {
+    "forkortning": "S",
+    "partibeteckning": "Arbetarepartiet-Socialdemokraterna",
+    "uuid": "014b4b75-b1e4-4595-939e-a50114368898",
+    "valmyndigheten_id": "0002",
+    "valmyndigheten_registreringsdatum": "2017-11-02"
+  },
+  {
+    "forkortning": "C",
+    "partibeteckning": "Centerpartiet",
+    "uuid": "0c7afa14-49c0-4fbf-8134-d5dc33e3aae0",
+    "valmyndigheten_id": "0004",
+    "valmyndigheten_registreringsdatum": "2017-11-13"
+  },
+  {
+    "forkortning": "DD",
+    "partibeteckning": "Direktdemokraterna",
+    "uuid": "ee2b635a-d72d-44fc-8500-364dc6f4b049",
+    "valmyndigheten_id": "1150",
+    "valmyndigheten_registreringsdatum": "2017-12-13"
+  },
+  {
+    "forkortning": "DjuP",
+    "partibeteckning": "Djurens parti",
+    "uuid": "61e30b3f-000b-416c-827f-5c879995e027",
+    "valmyndigheten_id": "1136",
+    "valmyndigheten_registreringsdatum": "2019-02-28"
+  },
+  {
+    "forkortning": "ENH",
+    "partibeteckning": "Enhet",
+    "uuid": "c066e84b-70df-4140-91fc-17e824f855f2",
+    "valmyndigheten_id": "0189",
+    "valmyndigheten_registreringsdatum": "2018-02-26"
+  },
+  {
+    "forkortning": "EAP",
+    "partibeteckning": "Europeiska Arbetarpartiet-EAP",
+    "uuid": "7f82d8fc-349d-44d7-b807-c2fa1e2e8599",
+    "valmyndigheten_id": "0029",
+    "valmyndigheten_registreringsdatum": "1985-03-22"
+  },
+  {
+    "forkortning": "FI",
+    "partibeteckning": "Feministiskt initiativ",
+    "uuid": "70c002e1-366c-4f1e-b3bb-ec4dbadd2a5c",
+    "valmyndigheten_id": "0532",
+    "valmyndigheten_registreringsdatum": "2017-11-02"
+  },
+  {
+    "forkortning": "-",
+    "partibeteckning": "Högerpartiet de konservativa",
+    "uuid": "3a3d3745-4874-490c-909e-b408f732f7a7",
+    "valmyndigheten_id": "0452",
+    "valmyndigheten_registreringsdatum": "2004-03-11"
+  },
+  {
+    "forkortning": "INI",
+    "partibeteckning": "Initiativet",
+    "uuid": "3049903e-c829-4a88-a4f0-c484028c28af",
+    "valmyndigheten_id": "1374",
+    "valmyndigheten_registreringsdatum": "2018-03-27"
+  },
+  {
+    "forkortning": "KLP",
+    "partibeteckning": "Klassiskt liberala partiet",
+    "uuid": "2d487168-253f-4718-8f5e-e9622799d619",
+    "valmyndigheten_id": "0638",
+    "valmyndigheten_registreringsdatum": "2017-12-18"
+  },
+  {
+    "forkortning": "K",
+    "partibeteckning": "Kommunistiska Partiet",
+    "uuid": "72c13e0d-3c7c-454a-8331-1bb505e67f99",
+    "valmyndigheten_id": "0471",
+    "valmyndigheten_registreringsdatum": "2018-03-16"
+  },
+  {
+    "forkortning": "KD",
+    "partibeteckning": "Kristdemokraterna",
+    "uuid": "9f347cff-64b9-4f32-82dd-2b5063db46ed",
+    "valmyndigheten_id": "0068",
+    "valmyndigheten_registreringsdatum": "2017-11-02"
+  },
+  {
+    "forkortning": "LPo",
+    "partibeteckning": "Landsbygdspartiet Oberoende",
+    "uuid": "1d4cb4df-98bc-4377-81ae-45fe142e36f4",
+    "valmyndigheten_id": "1011",
+    "valmyndigheten_registreringsdatum": "2017-12-08"
+  },
+  {
+    "forkortning": "L",
+    "partibeteckning": "Liberalerna (tidigare Folkpartiet)",
+    "uuid": "a817d42f-8325-42ac-8ce8-7100afa40f2e",
+    "valmyndigheten_id": "0003",
+    "valmyndigheten_registreringsdatum": "2017-11-13"
+  },
+  {
+    "forkortning": "MED",
+    "partibeteckning": "Medborgerlig Samling",
+    "uuid": "81898f1a-edd1-4d76-b5af-df51e9380dc6",
+    "valmyndigheten_id": "1296",
+    "valmyndigheten_registreringsdatum": "2019-02-26"
+  },
+  {
+    "forkortning": "MP",
+    "partibeteckning": "Miljöpartiet de gröna",
+    "uuid": "25db2bdd-b06b-468a-bb8e-d900a46b797c",
+    "valmyndigheten_id": "0055",
+    "valmyndigheten_registreringsdatum": "2017-11-02"
+  },
+  {
+    "forkortning": "M",
+    "partibeteckning": "Moderaterna",
+    "uuid": "f6c1faf7-33c0-431e-a2e1-387b064cb222",
+    "valmyndigheten_id": "0001",
+    "valmyndigheten_registreringsdatum": "2017-11-13"
+  },
+  {
+    "forkortning": "NMR",
+    "partibeteckning": "Nordiska motståndsrörelsen",
+    "uuid": "89c9ac23-c563-4749-b356-4ab2254a55c7",
+    "valmyndigheten_id": "1273",
+    "valmyndigheten_registreringsdatum": "2015-07-09"
+  },
+  {
+    "forkortning": "PV",
+    "partibeteckning": "Partiet Vändpunkt",
+    "uuid": "560a7a44-97cf-4a9f-b646-67149da59c81",
+    "valmyndigheten_id": "1430",
+    "valmyndigheten_registreringsdatum": "2019-02-28"
+  },
+  {
+    "forkortning": "PP",
+    "partibeteckning": "Piratpartiet",
+    "uuid": "361ad31e-c46d-4335-be82-2f8592d757ac",
+    "valmyndigheten_id": "0524",
+    "valmyndigheten_registreringsdatum": "2017-12-18"
+  },
+  {
+    "forkortning": "RS",
+    "partibeteckning": "Rättvisepartiet Socialisterna",
+    "uuid": "c693a5d4-6003-488a-aa39-90798eb86719",
+    "valmyndigheten_id": "0131",
+    "valmyndigheten_registreringsdatum": "2017-12-05"
+  },
+  {
+    "forkortning": "SJP",
+    "partibeteckning": "Sjöbopartiet",
+    "uuid": "0afd06ca-22c8-4302-a2d3-3028aaed29b8",
+    "valmyndigheten_id": "0172",
+    "valmyndigheten_registreringsdatum": "1991-03-27"
+  },
+  {
+    "forkortning": "SKÅ",
+    "partibeteckning": "SKÅNEPARTIET",
+    "uuid": "c611c3df-3110-4c69-b57f-3741f0d276f1",
+    "valmyndigheten_id": "0054",
+    "valmyndigheten_registreringsdatum": "1979-05-15"
+  },
+  {
+    "forkortning": "-",
+    "partibeteckning": "Sociala Partiet (SP)",
+    "uuid": "e66c20d1-33aa-4aaa-8b7a-a1f1f9224f15",
+    "valmyndigheten_id": "0522",
+    "valmyndigheten_registreringsdatum": "2009-02-11"
+  },
+  {
+    "forkortning": "SOC.P",
+    "partibeteckning": "Socialistiska Partiet",
+    "uuid": "a60b09db-d087-4417-a40e-fd9e28ccb95a",
+    "valmyndigheten_id": "0074",
+    "valmyndigheten_registreringsdatum": "1985-02-18"
+  },
+  {
+    "forkortning": "SPI",
+    "partibeteckning": "SPI Välfärden",
+    "uuid": "cbc1226c-5b83-4ede-a7ac-72d7e18a673d",
+    "valmyndigheten_id": "0107",
+    "valmyndigheten_registreringsdatum": "2013-07-02"
+  },
+  {
+    "forkortning": "SD",
+    "partibeteckning": "Sverigedemokraterna",
+    "uuid": "37f3bb7c-411f-42b6-982a-6d7ea7d762cc",
+    "valmyndigheten_id": "0110",
+    "valmyndigheten_registreringsdatum": "2017-11-30"
+  },
+  {
+    "forkortning": "TRP",
+    "partibeteckning": "TRYGGHETSPARTIET",
+    "uuid": "347e59b5-b143-449f-aeb3-d357e26b3dfa",
+    "valmyndigheten_id": "1309",
+    "valmyndigheten_registreringsdatum": "2017-10-20"
+  },
+  {
+    "forkortning": "VägV",
+    "partibeteckning": "Vägvalet",
+    "uuid": "6e7274ab-5d78-48d1-b7b9-92a3245ca54f",
+    "valmyndigheten_id": "1138",
+    "valmyndigheten_registreringsdatum": "2018-03-12"
+  },
+  {
+    "forkortning": "V",
+    "partibeteckning": "Vänsterpartiet",
+    "uuid": "c9f74c03-061d-4949-8ad8-43c62a894b73",
+    "valmyndigheten_id": "0005",
+    "valmyndigheten_registreringsdatum": "2017-11-02"
+  }
+]

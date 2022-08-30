@@ -1,16 +1,321 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    h1 { @apply font-bold text-5xl; }
+    h2 { @apply font-bold text-3xl; }
+    h3 { @apply font-bold text-2xl; }
+    h4 { @apply font-bold text-xl; }
+
+    [tabindex]:focus {
+        outline: none;
+    }
+
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer components {
+
+    .pill {
+        @apply bg-orange-500 hover:bg-orange-700 rounded text-white py-1 cursor-pointer w-24 inline-block text-center;
+    }
+
+    .choices {
+        position: relative;
+
+        .search-token-list-search {
+            @apply border-sky-500 border-2 rounded-lg w-full absolute;
+            margin: 0.3em 0 0 0;
+            top: 100%;
+
+            .search-token-list-input {
+                @apply text-sky-800 placeholder-sky-500 placeholder:font-medium;
+                border: none;
+                font-size: 125%;
+                font-weight: bold;
+                background: none;
+                margin: -2px;
+                padding: 0 0.75em;
+                line-height: 2.5em;
+                height: 2.5em;
+            }
+        }
+
+        .react-autosuggest__suggestion {
+            border-top: 1px solid currentColor;
+            border-radius: 0.5em;
+            .fa-list-item .message strong {
+                font-weight: 900;
+                color: black;
+            }
+        }
+
+        .react-autosuggest__suggestion--highlighted {
+            @apply bg-sky-400 border-sky-400 text-sky-700;
+            .fa-list-item .message strong {
+                color: white;
+            }
+        }
+    }
+
+    .choices-full .search-token-list-search {
+        display: none;
+    }
+
+
+    .choice {
+        position: relative;
+        display: flex;
+        border-radius: 0.5em;
+        padding: 0.75em 0.5em;
+        margin: 0.3em 0;
+        color: white;
+        @apply bg-sky-500 focus:bg-sky-700;
+
+        .choice-nr {
+            margin: 0 0.25em 0 0.15em;
+            line-height: 1em;
+            font-size: 200%;
+            font-weight: 900;
+        }
+
+        .choice-info {
+            display: flex;
+            flex-wrap: wrap;
+
+            > * {
+                margin: 0 0.25rem;
+            }
+
+            .choice-name {
+                flex-basis: 100%;
+                font-weight: 600;
+                font-size: 125%;
+                line-height: 1.2em;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .choice-remove {
+            @apply absolute top-2 right-2 w-6 focus:outline-none hover:bg-red-500 rounded;
+            > * {
+                pointer-events: none;
+            }
+        }
+    }
+
+    .valsedel-wrapper {
+
+        .valsedel-preview {
+            width: 100%;
+            padding-top: 140.95238095%; /* (148 / 105) * 100%; */
+            position: relative;
+            box-shadow: 0 0.5em 3em -2em black;
+            color: black;
+            font-family: Helvetica, sans-serif;
+            font-size: 10pt;
+
+            .bars {
+                position: absolute;
+                width: 2.5em;
+                top: 50%;
+
+                &:before {
+                    content: " ";
+                    position: absolute;
+                    background-color: black;
+                    width: 100%;
+                    height: 0.4em;
+                }
+
+                &.bars-left { left: 0; }
+                &.bars-right { right: 0; }
+            }
+
+            .valsedel-top-text {
+                font-weight: 800;
+                position: absolute;
+                top: 6pt;
+                width: 100%;
+                line-height: 1em;
+                text-align: center;
+            }
+
+            .valsedel-choices {
+                position: absolute;
+                top: 20pt;
+                right: 10mm;
+                bottom: 0;
+                left: 10mm;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: stretch;
+
+                .valsedel-choice {
+                    position: relative;
+                    flex: 1 1 100px;
+                    text-align: center;
+                    border-top: 1px solid black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding-bottom: 8pt;
+
+                    .valsedel-choice-label {
+                        text-transform: uppercase;
+                        position: absolute;
+                        top: 0.2em;
+                        left: 0.2em;
+                    }
+
+                    &:first-child:last-child {
+                        @apply justify-start pt-6;
+
+                        .valsedel-choice-label {
+                            display: none;
+                        }
+                    }
+
+                    .valsedel-choice-party {
+                        margin-bottom: 0.5em;
+                        .logo {
+                            max-width: 80%;
+                            max-height: 10em;
+                        }
+                    }
+
+                    .valsedel-choice-person {
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid black;
+                        padding: 0.3em 0.2em 0.3em 0;
+                        margin-bottom: 0.5em;
+
+                        > * {
+                            margin: 0 0.4em;
+                        }
+
+                        .person-check {
+                            font-size: 150%;
+                            line-height: 1em;
+                            margin-bottom: 0em;
+                        }
+
+                        .person-info {
+                            opacity: 0.5;
+                        }
+                    }
+
+                    .valsedel-choice-district {
+                        position: absolute;
+                        bottom: 20pt;
+                        width: 100%;
+                        text-align: center;
+                        font-weight: 800;
+                        line-height: 1em;
+                        font-size: 8pt;
+                        text-transform: uppercase;
+                    }
+
+                    .valsedel-choice-list-type {
+                        position: absolute;
+                        bottom: 4pt;
+                        display: flex;
+                        font-size: 11pt;
+                        > * {
+                            margin: 0 0.25em;
+                        }
+                    }
+                }
+
+            }
+
+            &.riksdag {
+                background-color: #F7F6C2;
+
+                .bars {
+                    height: 0.35em;
+                    &:before {
+                        top: -0.4em;
+                    }
+                    &:after {
+                        content: " ";
+                        position: absolute;
+                        background-color: black;
+                        width: 100%;
+                        height: 0.4em;
+                        bottom: -0.4em;
+                    }
+                }
+            }
+            &.landsting {
+                background-color: #CDE6F7;
+            }
+
+        }
+
+        /* @include for-phone-only {
+            font-size: 30%;
+        }
+        @include for-tablet-portrait-up {
+            font-size: 50%;
+        }
+        @include for-tablet-landscape-up {
+            font-size: 75%;
+        }
+        @include for-desktop-up {
+            font-size: 100%;
+        } */
+
+    }
+
+
 }
 
-* {
-  box-sizing: border-box;
+
+.react-autosuggest__container {
+    position: relative;
+}
+
+.react-autosuggest__input--focused {
+    outline: none;
+}
+
+.react-autosuggest__input--open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+    display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+    cursor: pointer;
+
+    + .react-autosuggest__suggestion {
+        border-top: 1px solid currentColor;
+    }
+
+}
+
+.react-autosuggest__suggestion--highlighted {
+    background-color: #ddd;
 }

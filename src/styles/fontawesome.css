@@ -1,0 +1,89 @@
+
+.fa-margin {
+    > .svg-inline--fa + * {
+        margin-left: 0.4em;
+    }
+    > .text + .label {
+        margin-left: 0.6em;
+    }
+}
+
+.fa-div {
+    white-space: nowrap;
+    > * {
+        vertical-align: middle;
+    }
+}
+
+.fa-list-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.5em 0.65em;
+
+    .icon {
+        flex: 0 0 auto;
+        padding-right: 0.6em;
+    }
+
+    .body {
+        flex: 1 1 auto;
+
+        .title {
+            font-weight: 600;
+            font-size: 120%;
+            margin: -2px 0 10px;
+        }
+
+        .message {
+            padding-bottom: 0.2em;
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 80%;
+            margin-left: -0.5em;
+            > div {
+                margin: 0 0.5em;
+            }
+        }
+
+    }
+
+    + .fa-list-item {
+        border-top: 1px solid currentColor;
+    }
+}
+
+.fa-layered-text-icon {
+    position: relative;
+
+    > .fa-layered-text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1em;
+        font-size: 80%;
+        font-family: Helvetica, sans-serif;
+    }
+}
+
+.fa-feedback-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

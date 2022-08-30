@@ -1,0 +1,20 @@
+
+.Wrapper {
+  @apply bg-sky-300 text-sky-900 min-h-screen;
+}
+
+.Header {
+  @apply bg-sky-500 text-white py-4;
+}
+
+.Content {
+  @apply container mx-auto py-8 flex flex-row;
+
+  > div {
+    @apply w-1/2 px-2;
+  }
+
+  h2 {
+    @apply mb-3;
+  }
+}

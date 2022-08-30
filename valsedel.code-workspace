@@ -1,0 +1,48 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/sourceMaps": true,
+      "**/.babel-cache": true,
+      "**/.cache": true,
+      "**/*.tar": true,
+      "**/*.gz": true,
+      "**/*.csv": true,
+      "**/__pycache__": true,
+      "**/package-lock.json": true,
+    },
+    "files.exclude" : {
+      ".next": true,
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/sourceMaps": true,
+      "**/.venv": true,
+      "**/.babel-cache": true,
+      "**/.cache": true,
+      "**/*.tar": true,
+      "**/*.gz": true,
+    },
+    "files.associations": {
+      "*.css": "postcss"
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+    },
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "[postcss]": {
+      "editor.tabSize": 4
+    },
+    "window.title": "🇸🇪 Valsedel"
+  }
+}

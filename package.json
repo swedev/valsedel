@@ -1,7 +1,6 @@
 {
   "name": "valsedel",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,18 +8,33 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/pro-duotone-svg-icons": "^6.1.1",
+    "@fortawesome/pro-light-svg-icons": "^6.1.1",
+    "@fortawesome/pro-regular-svg-icons": "^6.1.1",
+    "@fortawesome/pro-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "classnames": "^2.3.1",
+    "next": "12.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-themeable": "^1.1.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@types/react": "17.0.24",
-    "autoprefixer": "^10.3.6",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "eslint-config-standard": "^16.0.3",
-    "postcss": "^8.3.8",
-    "tailwindcss": "^2.2.16",
-    "typescript": "4.4.3"
+    "@types/node": "18.0.6",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "@types/uuid": "^8.3.4",
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.2",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.6",
+    "typescript": "4.7.4"
   }
 }

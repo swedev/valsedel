@@ -51,3 +51,10 @@ https://politologerna.wordpress.com/2019/12/15/lucka-15-sa-reformerar-vi-det-sve
 https://politologerna.wordpress.com/2018/04/01/konsten-att-klara-fyraprocentsparren/
 
 https://www.val.se/download/18.574dd8aa1610997fea4260d/1522337689763/2018-03-29-Manual-valsedelsbestallning-752-10.pdf
+
+## Dev
+
+1. Clone repo
+2. `npm ci`
+3. `npm run dev`
+4. Open `localhost:3000`
