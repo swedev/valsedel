@@ -54,7 +54,7 @@ export default function Home() {
       {/* Header */}
       <header className="bg-base-100 border-b border-base-300">
         <div className="max-w-4xl mx-auto px-4 py-6">
-          <h1 className="text-2xl font-bold">Valsedel.se</h1>
+          <h1 className="text-2xl font-bold">valsedel.partidata.se</h1>
           <p className="opacity-60 mt-1">
             Skapa din egen valsedel med ranked choice voting
           </p>
@@ -172,7 +172,7 @@ export default function Home() {
       <footer className="border-t border-base-300 mt-16">
         <div className="max-w-4xl mx-auto px-4 py-6 text-center text-sm opacity-60">
           <p>
-            Valsedel.se - Ett proof-of-concept för ranked choice voting i
+            Valsedel - Ett proof-of-concept för ranked choice voting i
             Sverige
           </p>
         </div>

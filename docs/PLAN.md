@@ -1,4 +1,4 @@
-# Valsedel.se - Implementeringsplan
+# Valsedel - Implementeringsplan
 
 ## Mål
 Skapa en proof-of-concept för ranked choice voting i Sverige med modern, produktionsklar arkitektur.

@@ -170,7 +170,7 @@ ${dashedLine}
 `)}`;
   }
 
-  return `% Valsedel genererad av minvalsedel.se
+  return `% Valsedel genererad av valsedel.partidata.se
 % Valtyp: ${data.electionType}
 % Antal partier: ${numParties}
 

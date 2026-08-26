@@ -1,4 +1,4 @@
-# Valsedel.se - Framsteg
+# Valsedel - Framsteg
 
 Senast uppdaterad: 2026-01-17
 

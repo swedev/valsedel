@@ -1,7 +1,7 @@
 # Modernisering, publicering och deploy
 
 Utvärdering av projektets tillstånd och en plan för att ta det till
-referensstacken, publicera på minvalsedel.se och driftsätta på saga.
+referensstacken, publicera på valsedel.partidata.se och driftsätta på saga.
 
 Beslut i det här dokumentet är märkta med sitt ursprung: *(användarbeslut)*,
 *(befintlig konvention)* eller *(bedömning)*. Bedömningar är öppna att
@@ -33,7 +33,7 @@ bara på renderingen.
 
 | Fråga | Beslut |
 |-------|--------|
-| Domän | `minvalsedel.se`, registrerad. Repot förblir `swedev/valsedel` *(användarbeslut)* |
+| Domän | `valsedel.partidata.se`. Repot förblir `swedev/valsedel` *(användarbeslut)* |
 | Docker på saga | Installeras; fler sajter kommer att behöva det *(användarbeslut)* |
 | Delning | URL-kodad valsedel, ingen Postgres *(användarbeslut)* |
 | Integritet | Nedladdningen innehåller fler valsedlar än användarens egen *(användarbeslut)* |
@@ -43,7 +43,7 @@ bara på renderingen.
 
 Asset-luckan i klartex HTTP-API är anmäld som
 [swedev/klartex.se#18](https://github.com/swedev/klartex.se/issues/18). Den
-blockerar inte minvalsedel, eftersom biblioteksvägen används här.
+blockerar inte valsedelstjänsten, eftersom biblioteksvägen används här.
 
 ## Nuläge
 
@@ -339,9 +339,9 @@ publicerar ingen datamängd som artefakt. Något behöver tillkomma:
 | Publikt JSON-API på partidata.se | Färskast, men runtime-beroende mellan två sajter | Överkurs för data som ändras några gånger per år |
 
 *(Bedömning.)* Release-artefakten kräver ett litet tillägg i partidatas
-deploy-workflow och ger minvalsedel en versionsstämpel att visa i UI:t.
+deploy-workflow och ger valsedelstjänsten en versionsstämpel att visa i UI:t.
 
-## Publicering på minvalsedel.se och deploy på saga
+## Publicering på valsedel.partidata.se och deploy på saga
 
 ### Vad saga är idag
 
@@ -354,7 +354,7 @@ Inget byggs på servern. Hemligheter ligger i GitHub-environmentet `production`.
 
 ### Form
 
-Docker installeras på saga *(användarbeslut)*, och minvalsedel körs som en
+Docker installeras på saga *(användarbeslut)*, och valsedelstjänsten körs som en
 compose-stack bunden till `127.0.0.1` bakom maskinens befintliga nginx. Imagen
 hämtas versionspinnad från GHCR, samma form som timla och styrla. nginx förblir
 maskinens enda TLS-terminator — Caddy introduceras inte på saga, eftersom tre
@@ -370,13 +370,12 @@ inte kolliderar.
 
 ### Publicering
 
-- **DNS (Loopia):** `minvalsedel.se` och `www.minvalsedel.se` → A mot sagas IPv4,
-  AAAA mot dess IPv6.
+- **DNS (Loopia):** `valsedel.partidata.se` → A mot sagas IPv4 och AAAA mot
+  dess IPv6.
 - **nginx:** en vhost efter mönstret i `partidata/deploy/partidata.se.conf` —
-  apex omdirigerar till www, proxy mot loopback-porten, `X-Content-Type-Options`
-  och `Referrer-Policy`, gzip.
-- **TLS:** `certbot --nginx -d minvalsedel.se -d www.minvalsedel.se` efter att DNS
-  pekar rätt.
+  proxy mot loopback-porten, `X-Content-Type-Options`, `Referrer-Policy` och
+  gzip.
+- **TLS:** `certbot --nginx -d valsedel.partidata.se` efter att DNS pekar rätt.
 - **Namnet i koden:** rubrik, `<title>`, OG-tags och LaTeX-kommentaren följer
   domänen.
 - **Release:** `v*`-tagg bygger image till GHCR och kör deploy — merge är inte
