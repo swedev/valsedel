@@ -1,0 +1,9 @@
+# Override for local development
+# This file is automatically merged with docker-compose.yml
+# Run: docker compose up (starts only db and latex)
+# Then: npm run dev (for Next.js with hot reloading)
+
+services:
+  app:
+    profiles:
+      - production

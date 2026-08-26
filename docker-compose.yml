@@ -1,0 +1,45 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: valsedel
+      POSTGRES_PASSWORD: valsedel
+      POSTGRES_DB: valsedel
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U valsedel"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://valsedel:valsedel@db:5432/valsedel
+    volumes:
+      - latex_output:/app/latex/output
+    depends_on:
+      db:
+        condition: service_healthy
+      latex:
+        condition: service_started
+
+  latex:
+    build:
+      context: ./latex
+      dockerfile: Dockerfile
+    volumes:
+      - latex_output:/latex/output
+    # Container keeps running, API calls exec into it
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+volumes:
+  postgres_data:
+  latex_output:

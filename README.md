@@ -1,60 +1,36 @@
-# valsedel
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Konceptsida för skapande av valsedlar.
+## Getting Started
 
----
+First, run the development server:
 
-![valsedel_draft](https://user-images.githubusercontent.com/3729799/71602451-bf034380-2b58-11ea-8106-9d2bcaae7ef7.png)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Domän
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-* valsedel.nu
-* minvalsedel.se
-* annan?
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Syfte
+## Learn More
 
-Främja idén att införa andrahandsröst eller rangordnad röst i Sveriges allmänna val.
+To learn more about Next.js, take a look at the following resources:
 
-## Funktioner
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-* Välj att skapa valsedel för kommunen, regionen, Riksdagen eller Europaparlamentet.
-* Fritextsök efter parti eller kandidat.
-* Lägg till första-, andra- och tredjehandsval på en valsedel.
-* Ladda ner genererade tryckfiler.
-* Direktlänk till färdig valsedel eller grupp av valsedlar.
-* Beställ hem valsedlar (i framtiden när valsedlarna är giltiga).
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Information
+## Deploy on Vercel
 
-* Sammanfattning av fördelar.
-* Beskrivning av räkningsprocessen. Vad förändras?
-* Bra YouTube-videos som förklarar, kanske CGP Gray?
-* Länkar till välskrivna artiklar.
-* Vilka lagar finns och eventuellt behöver ändras? Nuvarande [regler för valsedelslayout](https://www.val.se/download/18.574dd8aa1610997fea4260d/1522337689763/2018-03-29-Manual-valsedelsbestallning-752-10.pdf).
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Data
-
-* Skapa öppet dataregister med partier, kandidater, valkretsar, etc.
-
-## Bidra
-
-Om du är intresserad av att hjälpa till med utveckling och/eller innehåll, slå iväg ett mail till hello@swedev.org.
-
-
-## Länkar
-
-https://politologerna.wordpress.com/2019/12/15/lucka-15-sa-reformerar-vi-det-svenska-valsystemet/
-
-https://politologerna.wordpress.com/2018/04/01/konsten-att-klara-fyraprocentsparren/
-
-https://www.val.se/download/18.574dd8aa1610997fea4260d/1522337689763/2018-03-29-Manual-valsedelsbestallning-752-10.pdf
-
-## Dev
-
-1. Clone repo
-2. `npm ci`
-3. `npm run dev`
-4. Open `localhost:3000`
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

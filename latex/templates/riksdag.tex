@@ -1,0 +1,172 @@
+% Valsedel för Riksdagsval
+% Format: A6 (105 x 148 mm)
+% Färg: Ljusgul
+% Specifikation enligt Valmyndigheten och Valförordning 2005:874
+
+\documentclass[a6paper]{article}
+
+% Paket
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fontspec}  % Kräver XeLaTeX/LuaLaTeX
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{calc}
+\usepackage{ifthen}
+
+% ============================================
+% FÄRGER
+% ============================================
+% Riksdagsvalsedelns gula färg (approximation)
+\definecolor{riksdaggul}{RGB}{255, 255, 200}
+\definecolor{signallinje}{RGB}{0, 0, 0}
+
+% ============================================
+% SIDFORMAT
+% ============================================
+\geometry{
+  paperwidth=105mm,
+  paperheight=148mm,
+  left=10mm,
+  right=10mm,
+  top=4mm,
+  bottom=5mm,
+  nohead,
+  nofoot
+}
+
+% Bakgrundsfärg
+\pagecolor{riksdaggul}
+
+% ============================================
+% TYPSNITT
+% ============================================
+% Open Sans (måste finnas installerat)
+\setmainfont{Open Sans}[
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+]
+
+% ============================================
+% AVSTÅND ENLIGT SPECIFIKATION
+% ============================================
+\newlength{\fieldspacing}
+\setlength{\fieldspacing}{2.45mm}
+
+\newlength{\fieldspacinglarge}
+\setlength{\fieldspacinglarge}{3.6mm}
+
+\newlength{\symbolwidth}
+\setlength{\symbolwidth}{85.5mm}
+
+\newlength{\symbolheight}
+\setlength{\symbolheight}{12.75mm}
+
+% ============================================
+% VARIABLER (ersätts vid generering)
+% ============================================
+\newcommand{\valkrets}{((VALKRETS))}
+\newcommand{\partibeteckning}{((PARTIBETECKNING))}
+\newcommand{\partisymbol}{((PARTISYMBOL))}  % Sökväg till logotyp
+\newcommand{\harpartisymbol}{((HAR_PARTISYMBOL))}  % true/false
+
+% ============================================
+% KANDIDATLISTA
+% Varje kandidat: \kandidat{nummer}{förnamn}{efternamn}{info}
+% ============================================
+\newcounter{kandidatnr}
+\setcounter{kandidatnr}{0}
+
+% Kryssruta
+\newcommand{\kryssruta}[1]{%
+  \begin{tikzpicture}[baseline=-0.5ex]
+    \draw[thick] (0,0) rectangle (3.5mm,3.5mm);
+    \node[anchor=west] at (4mm,1.75mm) {\small #1};
+  \end{tikzpicture}%
+}
+
+% Kandidatrad med kryssruta
+\newcommand{\kandidat}[4]{%
+  \stepcounter{kandidatnr}%
+  \noindent
+  \begin{minipage}{\textwidth}
+    \kryssruta{\thekanditatnr}%
+    \hspace{2mm}%
+    \textbf{#2 #3}%
+    \ifthenelse{\equal{#4}{}}{}{, #4}%
+  \end{minipage}%
+  \par\vspace{1mm}%
+}
+
+% ============================================
+% DOKUMENTSTART
+% ============================================
+\begin{document}
+\pagestyle{empty}
+\raggedright
+
+% ============================================
+% FÄLT 1: Valbeteckning
+% ============================================
+\noindent
+{\Large\bfseries Val till riksdagen}
+
+\vspace{\fieldspacing}
+
+% ============================================
+% FÄLT 2: Valkrets
+% ============================================
+\noindent
+{\normalsize \valkrets}
+
+\vspace{\fieldspacing}
+
+% ============================================
+% FÄLT 3: Partibeteckning/symbol
+% ============================================
+\noindent
+\ifthenelse{\equal{\harpartisymbol}{true}}{%
+  % Med partisymbol
+  \includegraphics[width=\symbolwidth,height=\symbolheight,keepaspectratio]{\partisymbol}%
+}{%
+  % Utan symbol - bara text
+  {\LARGE\bfseries \partibeteckning}%
+}
+
+\vspace{\fieldspacing}
+
+% ============================================
+% FÄLT 4: Signallinjer (2 st för riksdagsval)
+% ============================================
+\noindent
+\begin{tikzpicture}
+  \draw[line width=0.5mm, signallinje] (0,0) -- (\textwidth,0);
+  \draw[line width=0.5mm, signallinje] (0,-2mm) -- (\textwidth,-2mm);
+\end{tikzpicture}
+
+\vspace{\fieldspacinglarge}
+
+% ============================================
+% FÄLT 6: Kandidatlista
+% ============================================
+\noindent
+{\small\bfseries Kandidater}
+
+\vspace{2mm}
+
+% Kandidater infogas här via mallgenerering
+((KANDIDATLISTA))
+
+% ============================================
+% FÄLT (botten): Administrativ information
+% ============================================
+\vfill
+\noindent
+{\tiny\color{gray} Valsedel genererad via valsedel.se -- ej officiell}
+
+\end{document}

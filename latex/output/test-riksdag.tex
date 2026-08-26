@@ -1,0 +1,97 @@
+% Valsedel genererad av minvalsedel.se
+% Valtyp: riksdag
+% Antal partier: 1
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{eso-pic}
+
+\definecolor{bakgrund}{RGB}{255, 255, 200}
+
+\geometry{
+  paperwidth=105mm,
+  paperheight=148mm,
+  left=10mm,
+  right=10mm,
+  top=4mm,
+  bottom=4mm,
+  nohead,
+  nofoot
+}
+
+\pagecolor{bakgrund}
+
+\setmainfont{OpenSans}[
+  Path = /usr/share/fonts/truetype/open-sans/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+]
+
+\begin{document}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% --- VALBETECKNING ---
+\begin{center}
+{\fontsize{9}{11}\selectfont\bfseries VAL TILL RIKSDAGEN}
+\end{center}
+
+\vspace{-2mm}
+
+% --- PARTIVAL ---
+\noindent\tikz\draw[dashed, line width=0.4pt] (0,0) -- (\textwidth,0);
+
+\begin{minipage}[t][109mm][t]{\textwidth}
+\vspace{4mm}
+
+{\centering\adjustbox{max width=\textwidth}{\fontsize{28}{32}\selectfont\bfseries Socialdemokraterna}\par}
+\vspace{2mm}
+{\fontsize{8}{10}\selectfont\noindent\begin{tikzpicture}[baseline=0.5ex]
+  \draw[thick] (0,0) rectangle (3.5mm,3.5mm);
+  \draw[thick] (0.7000000000000001mm,1.75mm) -- (1.505mm,0.7000000000000001mm) -- (3.01mm,3.01mm);
+  \node[anchor=base west] at (5mm, 0.6mm) {\strut 1\hspace{4mm}Magdalena Andersson, 56 år, statsminister};
+\end{tikzpicture}}
+\end{minipage}
+
+% --- SIGNALLINJER ---
+
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+      \put(0mm,74.75mm){\rule{8mm}{1.5mm}}
+      \put(97mm,74.75mm){\rule{8mm}{1.5mm}}
+      \put(0mm,71.75mm){\rule{8mm}{1.5mm}}
+      \put(97mm,71.75mm){\rule{8mm}{1.5mm}}
+  }%
+}
+
+% --- SIDFOT (absolut positionerad) ---
+\AddToShipoutPictureFG*{%
+  \AtPageLowerLeft{%
+    \put(10mm,16mm){\tikz\draw[dashed, line width=0.4pt] (0,0) -- (85mm,0);}%
+    \put(10mm,4mm){%
+      \begin{minipage}[b][13mm][b]{85mm}%
+        \begin{center}
+        {\fontsize{8}{10}\selectfont\bfseries Stockholms kommun}
+
+        \vspace{2mm}
+
+        {\fontsize{11}{13}\selectfont }
+        \end{center}
+      \end{minipage}%
+    }%
+  }%
+}
+
+\end{document}
